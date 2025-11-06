@@ -1,0 +1,42 @@
+:root{--bg:#0b1020;--panel:#121932;--text:#e7ecff;--muted:#a6b2d8;--brand:#7c9cf5;--border:#243055;--ok:#22c55e;--warn:#f59e0b;--danger:#ef4444}
+*{box-sizing:border-box}
+html,body{padding:0;margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+.container{max-width:960px;margin:0 auto;padding:24px}
+.site-header{border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(11,16,32,.85);backdrop-filter:saturate(120%) blur(6px);z-index:10}
+.site-header .brand{font-weight:700;color:var(--text);text-decoration:none;margin-right:16px}
+.site-header nav a{color:var(--muted);margin-right:12px;text-decoration:none}
+.site-header nav a:hover{color:var(--text)}
+.site-footer{border-top:1px solid var(--border);padding:16px 0;color:var(--muted)}
+
+h1{font-size:32px;margin:0 0 12px}
+h2{font-size:22px;margin:0 0 8px}
+h3{font-size:18px;margin:0 0 6px}
+.muted{color:var(--muted)}
+.stack-lg>*+*{margin-top:20px}
+
+.card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.button{display:inline-block;padding:8px 12px;background:var(--brand);color:#0b1020;border-radius:8px;text-decoration:none;font-weight:600}
+.input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:#0e1530;color:var(--text)}
+
+.search{position:relative}
+.search .results{position:absolute;left:0;right:0;margin-top:8px;background:#0e1530;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.search .result{display:block;padding:12px 14px;border-top:1px solid var(--border);color:var(--text);text-decoration:none}
+.search .result:hover{background:#0f1838}
+.search .code{font-weight:700}
+.search .summary{color:var(--muted)}
+.search .actions{margin:6px 0 0 0;padding-left:16px;color:var(--muted)}
+
+ol.steps{counter-reset:step}
+ol.steps>li{position:relative;padding-left:28px;margin:10px 0}
+ol.steps>li:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:2px;background:var(--brand);color:#0b1020;border-radius:999px;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+
+ul.list{list-style:none;margin:0;padding:0}
+ul.list>li+li{margin-top:12px}
+
+code{background:#0e1530;border:1px solid var(--border);padding:2px 6px;border-radius:6px}
+
+@media (max-width:640px){
+  .container{padding:16px}
+  h1{font-size:26px}
+}
